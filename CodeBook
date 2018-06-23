@@ -1,0 +1,114 @@
+Code book
+
+The code book describes the variables, the data, and any transformations or work that has been performed to clean up the data.
+
+Data
+Source data: txt.files from the repository, containing represent data collected from the accelerometers from the Samsung Galaxy S smartphone
+		located by the following web-link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Output data: tidy_data.txt - the files containing the final cleaned and calculated means for the selected observations and variables
+
+
+Variables
+
+Subject list: 30 variables identifying subjects for which the measurements have been recordered (under "subject")
+1...30
+
+Measuremenets list: 79 variables observed during the pre-defined activities 
+for each of these measures the MEAN have been calculated (for every "subject" and "activity")
+
+timeDomainBodyAccelerometer Mean   X
+timeDomainBodyAccelerometer Mean   Y
+timeDomainBodyAccelerometer Mean   Z
+timeDomainBodyAccelerometer StandardDeviation   X
+timeDomainBodyAccelerometer StandardDeviation   Y
+timeDomainBodyAccelerometer StandardDeviation   Z
+timeDomainGravityAccelerometer Mean   X
+timeDomainGravityAccelerometer Mean   Y
+timeDomainGravityAccelerometer Mean   Z
+timeDomainGravityAccelerometer StandardDeviation   X
+timeDomainGravityAccelerometer StandardDeviation   Y
+timeDomainGravityAccelerometer StandardDeviation   Z
+timeDomainBodyAccelerometerJerk Mean   X
+timeDomainBodyAccelerometerJerk Mean   Y
+timeDomainBodyAccelerometerJerk Mean   Z
+timeDomainBodyAccelerometerJerk StandardDeviation   X
+timeDomainBodyAccelerometerJerk StandardDeviation   Y
+timeDomainBodyAccelerometerJerk StandardDeviation   Z
+timeDomainBodyGyroscope Mean   X
+timeDomainBodyGyroscope Mean   Y
+timeDomainBodyGyroscope Mean   Z
+timeDomainBodyGyroscope StandardDeviation   X
+timeDomainBodyGyroscope StandardDeviation   Y
+timeDomainBodyGyroscope StandardDeviation   Z
+timeDomainBodyGyroscopeJerk Mean   X
+timeDomainBodyGyroscopeJerk Mean   Y
+timeDomainBodyGyroscopeJerk Mean   Z
+timeDomainBodyGyroscopeJerk StandardDeviation   X
+timeDomainBodyGyroscopeJerk StandardDeviation   Y
+timeDomainBodyGyroscopeJerk StandardDeviation   Z
+timeDomainBodyAccelerometerMagnitude Mean  
+timeDomainBodyAccelerometerMagnitude StandardDeviation  
+timeDomainGravityAccelerometerMagnitude Mean  
+timeDomainGravityAccelerometerMagnitude StandardDeviation  
+timeDomainBodyAccelerometerJerkMagnitude Mean  
+timeDomainBodyAccelerometerJerkMagnitude StandardDeviation  
+timeDomainBodyGyroscopeMagnitude Mean  
+timeDomainBodyGyroscopeMagnitude StandardDeviation  
+timeDomainBodyGyroscopeJerkMagnitude Mean  
+timeDomainBodyGyroscopeJerkMagnitude StandardDeviation  
+frequencyDomainBodyAccelerometer Mean   X
+frequencyDomainBodyAccelerometer Mean   Y
+frequencyDomainBodyAccelerometer Mean   Z
+frequencyDomainBodyAccelerometer StandardDeviation   X
+frequencyDomainBodyAccelerometer StandardDeviation   Y
+frequencyDomainBodyAccelerometer StandardDeviation   Z
+frequencyDomainBodyAccelerometer MeanFrequency   X
+frequencyDomainBodyAccelerometer MeanFrequency   Y
+frequencyDomainBodyAccelerometer MeanFrequency   Z
+frequencyDomainBodyAccelerometerJerk Mean   X
+frequencyDomainBodyAccelerometerJerk Mean   Y
+frequencyDomainBodyAccelerometerJerk Mean   Z
+frequencyDomainBodyAccelerometerJerk StandardDeviation   X
+frequencyDomainBodyAccelerometerJerk StandardDeviation   Y
+frequencyDomainBodyAccelerometerJerk StandardDeviation   Z
+frequencyDomainBodyAccelerometerJerk MeanFrequency   X
+frequencyDomainBodyAccelerometerJerk MeanFrequency   Y
+frequencyDomainBodyAccelerometerJerk MeanFrequency   Z
+frequencyDomainBodyGyroscope Mean   X
+frequencyDomainBodyGyroscope Mean   Y
+frequencyDomainBodyGyroscope Mean   Z
+frequencyDomainBodyGyroscope StandardDeviation   X
+frequencyDomainBodyGyroscope StandardDeviation   Y
+frequencyDomainBodyGyroscope StandardDeviation   Z
+frequencyDomainBodyGyroscope MeanFrequency   X
+frequencyDomainBodyGyroscope MeanFrequency   Y
+frequencyDomainBodyGyroscope MeanFrequency   Z
+frequencyDomainBodyAccelerometerMagnitude Mean  
+frequencyDomainBodyAccelerometerMagnitude StandardDeviation  
+frequencyDomainBodyAccelerometerMagnitude MeanFrequency  
+frequencyDomainBodyAccelerometerJerkMagnitude Mean  
+frequencyDomainBodyAccelerometerJerkMagnitude StandardDeviation  
+frequencyDomainBodyAccelerometerJerkMagnitude MeanFrequency  
+frequencyDomainBodyGyroscopeMagnitude Mean  
+frequencyDomainBodyGyroscopeMagnitude StandardDeviation  
+frequencyDomainBodyGyroscopeMagnitude MeanFrequency  
+frequencyDomainBodyGyroscopeJerkMagnitude Mean  
+frequencyDomainBodyGyroscopeJerkMagnitude StandardDeviation  
+frequencyDomainBodyGyroscopeJerkMagnitude MeanFrequency  
+
+Activities list: 6 activity labels identifying the type of the activity monitored (under "activity")
+
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+Transformations and cleaning the data
+1. Training & Test data with the features and labels have been loaded and merged into the single data set - activity_merged
+2. This data set was transfomed so that only the measurements of the mean and standard deviation remained
+3. Activity identifiers were replaced with activity names
+4. The measurements variable names were replaced with desctiptive names
+5. The means of the measurements were calculated and saved to tidydata.txt
